@@ -1,11 +1,13 @@
 #!/bin/bash 
 
-#make_page - A script to create HTML file
+#make_page - A script to get the server info and write those to HTML file
 
 title="System Information:"
 machine=$HOSTNAME
 RIGHT_NOW=$(date +"%x %r %Z")
 TIME_STAMP="Updated on $RIGHT_NOW by $USER"
+
+#Functions
 
 function system_info
 {
@@ -44,6 +46,7 @@ fi
 }
 
 #### Main #####
+#Activate the if to limit the permission only to the root
 #if [ "$(id -u)" != "0" ]; then
 #echo "$USER can't run this script, sorry :("
 #else
